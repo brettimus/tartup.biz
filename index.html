@@ -8,26 +8,233 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Remember the favicon! -->
 
+        <link href='//fonts.googleapis.com/css?family=Josefin+Slab:400,600,300italic,300' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+        <!-- Remember the favicon! -->
+    
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="bower_components/pure/pure-min.css">
         <link rel="stylesheet" href="bower_components/pure/grids-responsive-min.css">
         <link rel="stylesheet" href="css/style.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <!-- Stripe suggests we put this in the head --> 
+        <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+        <script type="text/javascript">
+          Stripe.setPublishableKey('pk_test_5tREVnfNh9PQbRNwefCjmWnr');
+        </script>
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <header>
-            
+        <nav>
+            <div class="logo">
+                
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        Lorem
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Ipsum
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <header class="">
+            <h1>
+                pop-tarts
+                <small>
+                    without 
+                    all the hassle                                        
+                </small>
+            </h1>
+            <p>
+                get a warm pop-tart delivered to your doorstep.
+                <br>
+                <small class="text-muted">
+                    launching in select cities
+                    <span data-launch-date>October 5<sup>th</sup>, 2015</span>, 
+                </small>
+            </p>
+            <button id="need-button">
+                I need this now
+            </button>              
         </header>
+        <div class="container">
+            <div class="pure-u-1">
+                <form id="main-form" class="u-hidden tart-form" 
+                    action="/tarters.json" method="post">
+
+                    <div class="progress-container">
+                        <div class="progress-step">
+                            Step <span data-step>1</span>
+                            of <span data-step-total>Infinity</span>
+                            <span data-step-message>~Get it started~</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div id="progress-bar" class="progress-bar"></div>
+                        </div>                        
+                    </div>
+
+
+                    <h2>
+                        You deserve a pop-tart.
+                        <small>
+                            Let's get you a pop-tart.
+                        </small>
+                    </h2>
+
+                    <fieldset id="name" class="">
+                        <p class="form-microcopy">
+                            First off, what is your name?                            
+                        </p>
+                        <br>
+                        <label for="first_name">
+                            First
+                        </label>
+                        <input id="first_name" type="text" 
+                            name="first_name" placeholder="E.g., Zoro"
+                            required>
+                        <br>
+                        <label for="last_name">Last</label>
+                        <input id="last_name" type="text" 
+                            name="last_name" placeholder="E.g., Zoro"
+                            required>
+                        <br>
+                        <button>
+                            My name is 
+                            <span data-tarter-first-name>&hellip;</span>, 
+                            and I want a pop-tart.
+                        </button>
+                    </fieldset>
+
+                    <!-- portland -->
+                    <fieldset id="portland" class="u-hidden">
+                        <p>
+                            Hey, <span data-tarter-first-name></span>!
+                            <br>
+                            For starters, are you in Portland, OR?
+                        </p>
+                        Yes
+                        <input id="portland_true"
+                            type="radio" name="portland" value="true">
+                        No
+                        <input id="portland_false"
+                            type="radio" name="portland" value="false">
+                    </fieldset>
+
+                    <!-- price -->
+                    <fieldset id="portland-price" class="u-hidden">
+                        You're in luck.
+                        <br>
+                        We can dispatch a toasty poptart
+                        directly to your door.
+                        <br>
+                        We'll grace you with a pop-tart for $5.
+                        <br>
+                        It's fucking worth it.
+
+                        <button>
+                            I want that pop-tart!
+                        </button>
+                        <!-- <button>No pop-tart, no.</button> -->
+                    </fieldset>
+
+
+                    <!-- ship -->
+                    <fieldset id="ship" class="u-hidden">
+                        Awh shucks!
+                        <br>
+                        What if we mailed you a pop-tart?
+                        <br>
+                        Do it!
+                        <input id="ship_true"
+                            type="radio" name="ship" value="true" >
+                        What? No.
+                        <input id="ship_false"
+                            type="radio" name="ship" value="false" >
+                    </fieldset>
+
+                    <!-- price -->
+                    <fieldset id="ship-price" class="u-hidden">
+                        Good call.
+                        <br>
+                        We can dispatch a once-toasted poptart
+                        directly to your door for the low price of $5.
+                        <br>
+                        It's fucking worth it.
+
+                        <button>
+                            I want that pop-tart!
+                        </button>
+                        <button>No pop-tart, no.</button>
+                    </fieldset>
+
+                    <!-- address -->
+                    <fieldset id="address" class="u-hidden">
+                        Alright. What's your address?
+                        <br>
+                        <input id="address_" type="text">
+                        <br>
+                        <input id="address_" type="text">
+                        <br>
+                        <input id="address_" type="text">
+                    </fieldset>
+
+                    <fieldset id="email" class="u-hidden">
+                        <br>
+                        What is your email?
+                        <br>
+                        <input name="email" type="email">
+                    </fieldset>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="container u-hidden">
+            <form action="" method="POST" id="stripe-form">
+              <span class="payment-errors"></span>
+
+              <div class="form-row">
+                <label>
+                  <span>Card Number</span>
+                  <input type="text" size="20" data-stripe="number"/>
+                </label>
+              </div>
+
+              <div class="form-row">
+                <label>
+                  <span>CVC</span>
+                  <input type="text" size="4" data-stripe="cvc"/>
+                </label>
+              </div>
+
+              <div class="form-row">
+                <label>
+                  <span>Expiration (MM/YYYY)</span>
+                  <input type="text" size="2" data-stripe="exp-month"/>
+                </label>
+                <span> / </span>
+                <input type="text" size="4" data-stripe="exp-year"/>
+              </div>
+
+              <button type="submit">Submit Payment</button>
+            </form>
+        </div>
 
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="bower_components/velocity/velocity.min.js"></script>
+        <script src="bower_components/velocity/velocity.ui.min.js"></script>
+
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 

@@ -1,16 +1,105 @@
-$black  : #222;
-$white  : #fff;
-$red    : #AE2B3D;
-$purple : #4208A1;
-$blue   : #115ABC;
-$green  : #00A24F;
-$yellow : #F7C019;
-$orange : #ED8C18;
 
-$serif      : serif;
-$sans-serif : sans-serif;
+@import "modules/variables";
+@import "modules/utilities";
+@import "layout/nav";
+@import "components/buttons";
+@import "components/forms";
+@import "components/progress-bar";
 
-$light  : 300;
-$normal : 400;
-$semi   : 600;
+a {
+  border-bottom: solid 1px $link-color;
+  color: $link-color;
+  padding-bottom: 2px;
+  text-decoration: none;
 
+  &:hover {
+    border-bottom: solid 3px $link-color-hover; 
+    transition: border-bottom ease-in-out .8s;
+  }
+}
+
+p {
+  font-family: $sans-serif;
+}
+
+body {
+  background: $black;
+  color: $white;
+}
+
+
+header {
+  box-sizing: border-box;
+  color: $white;
+  margin: 0 auto;
+  padding: .8em 1.3em 3em 1.3em; // what's a good way to do this?
+  position: relative;
+  width: 100%;
+
+  margin: 0 auto;
+  max-width: 40rem;
+
+  h1 {
+    font-family: $sans-serif;
+    font-size: 3.25em;
+    font-weight: $bold;
+
+    small {
+      display: block;
+      font-family: $sans-serif;
+      font-size: .5em;
+      font-weight: $normal;
+      line-height: 1.45em;
+    }
+  }
+
+  p {
+    font-family: $slab;
+    margin-top: 1.4em;
+    margin-bottom: 2em;
+  }
+
+  button {
+    background: $white;
+    border: none;
+    border-radius: 2em;
+    color: $red;
+    cursor: pointer;
+    display: block;
+    font-weight: $bold;
+    margin: 0 auto;
+    max-width: 20em;
+    padding: 1em 1.2em 1.1em 1.2em;
+    text-transform: uppercase;
+    width: 80%;
+  }
+}
+
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 48em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: .8em;
+  width: 100%;
+}
+
+
+@media only screen and (min-width: 35.5em) {
+  header {
+    h1 {
+      font-size: 6.5em;
+    }
+  }
+}
+
+ /*
+ * PURE Breakpoints
+ *
+ * sm  @media screen and (min-width: 35.5em) ≥ 568px .pure-u-sm-*
+ * md  @media screen and (min-width: 48em) ≥ 768px .pure-u-md-*
+ * lg  @media screen and (min-width: 64em) ≥ 1024px  .pure-u-lg-*
+ * xl  @media screen and (min-width: 80em) ≥ 1280px  .pure-u-xl-*
+ *
+ */

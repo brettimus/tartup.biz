@@ -1,0 +1,176 @@
+@charset "UTF-8";
+.text-muted {
+  color: #bbb; }
+
+.u-hidden {
+  display: none; }
+
+body {
+  padding-top: 4em; }
+
+nav {
+  box-sizing: border-box;
+  font-family: "Josefin Slab", serif;
+  font-size: 1em;
+  height: 4em;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  width: 100%; }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    nav ul li {
+      float: right;
+      padding: .8em 1.2em 1em 1.2em;
+      text-align: center; }
+  nav::after {
+    content: "";
+    clear: both; }
+
+button {
+  background: #fff;
+  border: none;
+  border-radius: 2em;
+  color: #AE2B3D;
+  cursor: pointer;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  min-width: 8em;
+  padding: 1em 1.2em 1.2em 1.2em; }
+
+form {
+  font-family: "Noto Sans", sans-serif; }
+
+.tart-form h2 small {
+  display: block;
+  color: #e6e6e6;
+  font-family: "Josefin Slab", serif;
+  font-weight: 300;
+  padding-left: 3px; }
+.tart-form fieldset {
+  border: none; }
+.tart-form input[type="text"] {
+  background: transparent;
+  border: none;
+  border-bottom: solid #fff 2px;
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  margin: .8em 0;
+  padding: .3em .5em .4em 0em;
+  width: 100%; }
+  .tart-form input[type="text"]:focus {
+    border-color: #115ABC;
+    outline: none;
+    transition: border ease-out .2s; }
+.tart-form label {
+  color: #888; }
+.tart-form button {
+  width: 100%; }
+
+.form-microcopy {
+  margin: 0; }
+
+.progress-container {
+  margin-bottom: 1em; }
+
+.progress-step {
+  color: #666; }
+
+.progress-bar-container {
+  border: solid 1px #666;
+  border-radius: 2em;
+  box-sizing: border-box;
+  min-height: 20px;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  z-index: 1; }
+  .progress-bar-container .progress-bar {
+    background: #F7C019;
+    border-radius: 2em;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%; }
+
+a {
+  border-bottom: solid 1px #fff;
+  color: #fff;
+  padding-bottom: 2px;
+  text-decoration: none; }
+  a:hover {
+    border-bottom: solid 3px #5c9bf0;
+    transition: border-bottom ease-in-out .8s; }
+
+p {
+  font-family: "Noto Sans", sans-serif; }
+
+body {
+  background: #222;
+  color: #fff; }
+
+header {
+  box-sizing: border-box;
+  color: #fff;
+  margin: 0 auto;
+  padding: .8em 1.3em 3em 1.3em;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 40rem; }
+  header h1 {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 3.25em;
+    font-weight: 700; }
+    header h1 small {
+      display: block;
+      font-family: "Noto Sans", sans-serif;
+      font-size: .5em;
+      font-weight: 400;
+      line-height: 1.45em; }
+  header p {
+    font-family: "Josefin Slab", serif;
+    margin-top: 1.4em;
+    margin-bottom: 2em; }
+  header button {
+    background: #fff;
+    border: none;
+    border-radius: 2em;
+    color: #AE2B3D;
+    cursor: pointer;
+    display: block;
+    font-weight: 700;
+    margin: 0 auto;
+    max-width: 20em;
+    padding: 1em 1.2em 1.1em 1.2em;
+    text-transform: uppercase;
+    width: 80%; }
+
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 48em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: .8em;
+  width: 100%; }
+
+@media only screen and (min-width: 35.5em) {
+  header h1 {
+    font-size: 6.5em; } }
+/*
+* PURE Breakpoints
+*
+* sm  @media screen and (min-width: 35.5em) ≥ 568px .pure-u-sm-*
+* md  @media screen and (min-width: 48em) ≥ 768px .pure-u-md-*
+* lg  @media screen and (min-width: 64em) ≥ 1024px  .pure-u-lg-*
+* xl  @media screen and (min-width: 80em) ≥ 1280px  .pure-u-xl-*
+*
+*/
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,22 @@
+$black  : #222;
+$black-muted: #666;
+$white  : #fff;
+$white-muted: #bbb;
+$red    : #AE2B3D;
+$purple : #4208A1;
+$blue   : #115ABC;
+$green  : #00A24F;
+$yellow : #F7C019;
+$orange : #ED8C18;
+
+$sans-serif : 'Noto Sans', sans-serif;
+$serif      : serif;
+$slab       : "Josefin Slab", serif;
+
+$light  : 300;
+$normal : 400;
+$semi   : 600;
+$bold   : 700;
+
+$link-color: $white;
+$link-color-hover: lighten($blue, 25%);

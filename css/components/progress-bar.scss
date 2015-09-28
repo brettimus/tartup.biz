@@ -1,0 +1,27 @@
+.progress-container {
+  margin-bottom: 1em;
+}
+
+.progress-step {
+  color: $black-muted;
+}
+
+.progress-bar-container {
+  border: solid 1px $black-muted;
+  border-radius: 2em;
+  box-sizing: border-box;
+  min-height: 20px;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  .progress-bar {
+    background: $yellow;
+    border-radius: 2em;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    width: 20%;
+  }
+}

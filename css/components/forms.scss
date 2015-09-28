@@ -1,0 +1,50 @@
+form {
+  font-family: $sans-serif;  
+}
+
+.tart-form {
+
+  h2 {
+    small {
+      display: block;
+      color: darken($white, 10%);
+      font-family: $slab;
+      font-weight: $light;
+      padding-left: 3px;
+    }
+  }
+
+  fieldset {
+    border: none;
+  }
+
+  input[type="text"] {
+    background: transparent;
+    border: none;
+    border-bottom: solid $white 2px;
+    box-sizing: border-box;
+    color: $white;
+    display: block;
+    margin: .8em 0;
+    padding: .3em .5em .4em 0em;
+    width: 100%;
+
+    &:focus {
+      border-color: $blue;
+      outline: none;
+      transition: border ease-out .2s;
+    }
+  }
+
+  label {
+    color: #888;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.form-microcopy {
+  margin: 0;
+}
